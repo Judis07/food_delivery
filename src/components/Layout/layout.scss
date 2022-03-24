@@ -1,0 +1,50 @@
+@import "../../variables.scss";
+
+.layout-container {
+  .inner-container {
+    width: 90%;
+    max-width: 1400px;
+    margin: 0 auto;
+  }
+
+  .flex-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .header {
+    padding: 1em 0;
+    border: 1px solid $neutralGrayLightest;
+    margin-bottom: 1em;
+
+    .logo {
+      width: 6em;
+    }
+
+    .navigation {
+      width: 40%;
+
+      .link {
+        font-weight: $bold;
+        color: $neutralBlack;
+      }
+
+      .cart {
+        background: #f3f4ff;
+        padding: 1em;
+        border-radius: 20px;
+
+        img {
+          width: 1.5em;
+        }
+      }
+
+      .profile {
+        img {
+          border-radius: 20px;
+        }
+      }
+    }
+  }
+}
