@@ -7,7 +7,6 @@ const Home = () => {
     <div className="home-container">
       <Layout>
         <Banner />
-        <div>Filters goes here</div>
         <Restaurants />
       </Layout>
     </div>

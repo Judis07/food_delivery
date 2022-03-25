@@ -26,7 +26,10 @@ const Card = (props) => {
         <div className="card-tags">
           {tags.map((tag) => (
             <div key={tag.id} className="card-tag">
-              {tag.name}
+              <div className="tag-icon">
+                <img src={tag.icon} alt="" />
+              </div>
+              <div>{tag.name}</div>
             </div>
           ))}
         </div>

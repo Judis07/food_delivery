@@ -40,7 +40,7 @@
       padding: 1em;
 
       .card-name {
-        font-weight: $semiBold;
+        font-weight: $bold;
         color: $neutralBlack;
         font-size: 1.25em;
       }
@@ -76,6 +76,8 @@
         margin-top: 1em;
 
         .card-tag {
+          display: flex;
+          align-items: center;
           text-transform: capitalize;
           background-color: $neutralGrayLightest;
           color: $neutralBlack;
@@ -83,6 +85,16 @@
           padding: 0.3em 1em;
           border-radius: 25px;
           margin-right: 0.5em;
+
+          .tag-icon {
+            width: 1em;
+            display: flex;
+            align-items: center;
+          }
+
+          div {
+            margin-right: 0.5em;
+          }
         }
       }
     }

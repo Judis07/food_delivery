@@ -1,0 +1,40 @@
+@import "../../variables.scss";
+
+.filters-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 3em 0;
+
+  .filter {
+    border: 2px solid $neutralGrayLightest;
+    padding: 1em 0;
+    width: 15%;
+    border-radius: 16px;
+    cursor: pointer;
+    text-align: center;
+
+    &:hover {
+      background-color: $primaryLightest;
+      border: 2px solid $primaryDefault;
+    }
+
+    .filter-image {
+      img {
+        width: 2em;
+      }
+      text-align: center;
+      margin-bottom: 1em;
+    }
+
+    .filter-name {
+      font-weight: $bold;
+      text-transform: capitalize;
+    }
+  }
+
+  .isSelected {
+    color: $primaryDefault;
+    border: 2px solid $primaryDefault;
+  }
+}
