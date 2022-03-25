@@ -1,3 +1,6 @@
+import { Link } from "react-router-dom";
+
+import LoginForm from "./form";
 import "./login.scss";
 
 const Login = () => {
@@ -12,14 +15,15 @@ const Login = () => {
         </div>
 
         <div className="login-detail">
-          <h1>Login</h1>
-
-          <p>
-            Sign in with your data that you entered during your registration.
-          </p>
+          <LoginForm />
         </div>
 
-        <div className="signup-section">Don’t have an account? Sign up</div>
+        <div className="signup-section">
+          Don’t have an account?{" "}
+          <Link className="link" to="/register">
+            Sign up
+          </Link>
+        </div>
       </div>
 
       <div className="review-section"></div>

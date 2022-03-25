@@ -1,7 +1,12 @@
-const Input = () => {
+import "./input.scss";
+
+const Input = (props) => {
+  const { type, label, placeholder, isRequired } = props;
   return (
     <div className="input-container">
-      <label htmlFor="email">Email</label>
+      <label htmlFor={label}>{label}</label>
+
+      <input type={type} required={isRequired} placeholder={placeholder} />
     </div>
   );
 };
