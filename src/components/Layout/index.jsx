@@ -10,7 +10,10 @@ const Layout = ({ children }) => {
         <div className="inner-container">
           <div className="flex-container">
             <div className="logo">
-              <img src={Logo} alt="Food Delivery" />
+              <img
+                src="https://res.cloudinary.com/dyvivj6d5/image/upload/v1648211535/logo_twd2km.svg"
+                alt="Food Delivery"
+              />
             </div>
 
             <nav className="navigation flex-container">

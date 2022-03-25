@@ -1,0 +1,34 @@
+@import "../../variables.scss";
+
+.login-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+
+  .login-form {
+    height: 100%;
+    width: 45%;
+    padding: 1em 5vw;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    .logo {
+      width: 6em;
+    }
+
+    .login-detail {
+      h1 {
+        font-size: 4em;
+        font-weight: $bold;
+      }
+    }
+  }
+
+  .review-section {
+    width: 65%;
+    height: 100%;
+    background-color: $primaryHover;
+  }
+}
