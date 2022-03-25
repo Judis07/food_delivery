@@ -1,6 +1,6 @@
 import Banner from "../../components/Banner";
 import Layout from "../../components/Layout";
-import "./home.scss";
+import Restaurants from "../../components/Restaurants";
 
 const Home = () => {
   return (
@@ -8,7 +8,7 @@ const Home = () => {
       <Layout>
         <Banner />
         <div>Filters goes here</div>
-        <div>Nearby restaurants goes here</div>
+        <Restaurants />
       </Layout>
     </div>
   );

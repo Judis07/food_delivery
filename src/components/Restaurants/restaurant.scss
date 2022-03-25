@@ -1,0 +1,90 @@
+@import "../../variables.scss";
+
+.restaurants-container {
+  margin: 1.5em 0;
+
+  .section-title {
+    color: $neutralBlack;
+    font-weight: $regular;
+    font-size: 1.25em;
+    margin-bottom: 1.5em;
+  }
+
+  .flex-container {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .restaurant-card {
+    position: relative;
+
+    width: 30%;
+    border: 1px solid $neutralGrayLightest;
+    border-radius: 16px;
+    margin-bottom: 2em;
+    overflow: hidden;
+
+    .featured {
+      position: absolute;
+      background-color: $primaryDefault;
+      color: $neutralWhite;
+      padding: 0.8em 1.5em;
+      right: 0;
+      border-bottom-left-radius: 16px;
+      text-transform: uppercase;
+      font-size: 0.8em;
+      font-weight: $semiBold;
+    }
+
+    .card-detail {
+      padding: 1em;
+
+      .card-name {
+        font-weight: $semiBold;
+        color: $neutralBlack;
+        font-size: 1.25em;
+      }
+
+      .card-info {
+        display: flex;
+        align-items: center;
+        font-weight: $semiBold;
+        color: $neutralGray;
+        font-size: 0.8em;
+        margin: 0.5em 0;
+
+        div {
+          margin-right: 0.5em;
+        }
+
+        .time-icon {
+          display: flex;
+          align-items: center;
+        }
+
+        .circle {
+          background-color: $primaryDefault;
+          width: 0.3em;
+          height: 0.3em;
+          border-radius: 50%;
+        }
+      }
+
+      .card-tags {
+        display: flex;
+        align-items: center;
+        margin-top: 1em;
+
+        .card-tag {
+          text-transform: capitalize;
+          background-color: $neutralGrayLightest;
+          color: $neutralBlack;
+          font-size: 0.8em;
+          padding: 0.3em 1em;
+          border-radius: 25px;
+          margin-right: 0.5em;
+        }
+      }
+    }
+  }
+}
