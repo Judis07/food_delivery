@@ -1,12 +1,41 @@
+import { useState } from "react";
 import "./input.scss";
 
 const Input = (props) => {
-  const { type, label, placeholder, isRequired } = props;
+  const {
+    type,
+    label,
+    placeholder,
+    getValue,
+    changeShowPass,
+    isRequired,
+    icon,
+  } = props;
+
+  const [value, setValue] = useState("");
+
+  const handleChange = (event) => {
+    getValue(event.target.value);
+
+    setValue(event.target.value);
+  };
   return (
     <div className="input-container">
       <label htmlFor={label}>{label}</label>
 
-      <input type={type} required={isRequired} placeholder={placeholder} />
+      <input
+        type={type}
+        value={value}
+        onChange={handleChange}
+        required={isRequired}
+        placeholder={placeholder}
+      />
+
+      {icon && (
+        <div onClick={changeShowPass} className="password-eye">
+          <img src={icon} alt="" />
+        </div>
+      )}
     </div>
   );
 };
