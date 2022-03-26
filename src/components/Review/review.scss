@@ -1,0 +1,36 @@
+@import "../../variables.scss";
+
+.review-section {
+  width: 65%;
+  height: 100%;
+  background-color: $primaryHover;
+  padding: 3em;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .grid-container {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(12, 50px);
+    column-gap: 15px;
+
+    .first-card {
+      grid-column: 2 / 7;
+    }
+
+    .second-card {
+      grid-column: 7 / 12;
+      grid-row: 2;
+    }
+
+    .bottom-card {
+      z-index: 2;
+      width: 100%;
+      grid-row: 11;
+      grid-column: 1 / 11;
+      z-index: 5;
+    }
+  }
+}

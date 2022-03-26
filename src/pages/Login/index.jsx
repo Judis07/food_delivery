@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import Review from "../../components/Review";
 
 import LoginForm from "./form";
 import "./login.scss";
@@ -26,7 +27,7 @@ const Login = () => {
         </div>
       </div>
 
-      <div className="review-section"></div>
+      <Review />
     </div>
   );
 };
