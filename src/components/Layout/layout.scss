@@ -23,7 +23,11 @@
     }
 
     .navigation {
-      width: 30%;
+      // width: 30%;
+
+      div {
+        margin-left: 1em;
+      }
 
       .link {
         font-weight: $bold;
