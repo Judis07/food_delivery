@@ -11,10 +11,11 @@
   align-items: center;
 
   .grid-container {
+    max-width: 50em;
     display: grid;
     grid-template-columns: repeat(12, 1fr);
     grid-template-rows: repeat(12, 50px);
-    column-gap: 15px;
+    column-gap: 1em;
 
     .first-card {
       grid-column: 2 / 7;
