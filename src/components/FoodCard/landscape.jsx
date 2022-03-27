@@ -1,25 +1,21 @@
 import "./foodCard.scss";
 
-const LandscapeCard = () => {
+const LandscapeCard = (props) => {
+  const { name, image, about, price } = props;
+
   return (
     <div className="card-container ">
       <div className="landscape">
         <div className="card-image">
-          <img
-            src="https://res.cloudinary.com/dyvivj6d5/image/upload/v1648281052/nigiri_set_jukgnn.png"
-            alt="Nigiri set"
-          />
+          <img src={image} alt={name} />
         </div>
 
         <div className="card-detail">
-          <div className="name">Nigiri Set</div>
+          <div className="name">{name}</div>
 
-          <div className="about">
-            Ea his sensibus eleifend, mollis iudicabit omittantur id mel. Et cum
-            ignota euismod corpora, et saepe.
-          </div>
+          <div className="about">{about}</div>
 
-          <div className="price">$ 16.80</div>
+          <div className="price">{price}</div>
         </div>
 
         <div className="card-cta">
