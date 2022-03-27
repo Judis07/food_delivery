@@ -1,6 +1,7 @@
 import LandscapeCard from "../FoodCard/landscape";
 import PortraitCard from "../FoodCard/portrait";
 import RatingCard from "../RatingCard";
+import Slider from "../Slider";
 import "./review.scss";
 
 const Review = () => {
@@ -31,7 +32,7 @@ const Review = () => {
         </div>
       </div>
 
-      <div style={{ marginTop: "-5em", zIndex: "5" }}></div>
+      <Slider />
     </div>
   );
 };
