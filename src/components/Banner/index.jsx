@@ -1,5 +1,3 @@
-import DesertIcon from "./desert.svg";
-import BurgerIcon from "./burger.svg";
 import Card from "./card";
 import "./banner.scss";
 const Banner = () => {
@@ -9,7 +7,7 @@ const Banner = () => {
         title="All deserts"
         discount="20"
         target="Deserty"
-        image={DesertIcon}
+        image="https://res.cloudinary.com/dyvivj6d5/image/upload/v1648460365/deserty_v8fiag.png"
         color="#4E60FF"
         bgColor="#F3F4FF"
       />
@@ -17,7 +15,7 @@ const Banner = () => {
         title="Big Burgers"
         discount="50"
         target="Fooddies"
-        image={BurgerIcon}
+        image="https://res.cloudinary.com/dyvivj6d5/image/upload/v1648460367/fooddies_bemtx8.png"
         color="#FD6D22"
         bgColor="#FFF3ED"
       />

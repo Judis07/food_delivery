@@ -20,6 +20,27 @@
 
     .logo {
       width: 6em;
+      margin-right: 2em;
+    }
+
+    .search-bar {
+      width: 15em;
+
+      @media only screen and (max-width: $mobile) {
+        display: none;
+      }
+      .input-container {
+        margin: initial;
+
+        input {
+          background: #edeef2;
+          border-radius: 12px;
+        }
+
+        .input-icon {
+          bottom: 28%;
+        }
+      }
     }
 
     .navigation {
@@ -33,16 +54,17 @@
         font-weight: $bold;
         color: $neutralBlack;
 
-        @media only screen and (max-width: $mobile) {
+        @media only screen and (max-width: $desktopMedium) {
           display: none;
         }
       }
 
       .cart {
         background: #f3f4ff;
-        padding: 1em;
+        padding: 0.8em;
         border-radius: 20px;
         position: relative;
+        display: flex;
 
         .items {
           position: absolute;
@@ -64,6 +86,20 @@
       .profile {
         img {
           border-radius: 20px;
+        }
+      }
+
+      .navbar {
+        display: none;
+        cursor: pointer;
+        background: $neutralGrayLightest;
+        padding: 1em;
+        border-radius: 20px;
+        justify-content: center;
+        align-items: center;
+
+        @media only screen and (max-width: $desktopMedium) {
+          display: flex;
         }
       }
     }

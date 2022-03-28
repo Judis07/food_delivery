@@ -32,7 +32,7 @@ const Input = (props) => {
       />
 
       {icon && (
-        <div onClick={changeShowPass} className="password-eye">
+        <div onClick={changeShowPass} className="input-icon">
           <img src={icon} alt="" />
         </div>
       )}
