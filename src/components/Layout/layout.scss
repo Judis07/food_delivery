@@ -32,6 +32,10 @@
       .link {
         font-weight: $bold;
         color: $neutralBlack;
+
+        @media only screen and (max-width: $mobile) {
+          display: none;
+        }
       }
 
       .cart {
