@@ -2,8 +2,8 @@ const Card = (props) => {
   const { title, discount, target, image, bgColor, color } = props;
   return (
     <div style={{ backgroundColor: bgColor }} className="discount-card">
-      <div>
-        <img src={image} alt="target" />
+      <div className="card-image">
+        <img src={image} alt={target} />
       </div>
 
       <div className="details">
@@ -11,6 +11,7 @@ const Card = (props) => {
         <div className="discount" style={{ color: color }}>
           {discount}% Off
         </div>
+
         <div className="target">{target}</div>
       </div>
     </div>
