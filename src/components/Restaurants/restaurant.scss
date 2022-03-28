@@ -17,12 +17,19 @@
 
   .restaurant-card {
     position: relative;
-
     width: 30%;
     border: 1px solid $neutralGrayLightest;
     border-radius: 16px;
     margin-bottom: 2em;
     overflow: hidden;
+
+    @media only screen and (max-width: $desktopSmall) {
+      width: 48%;
+    }
+
+    @media only screen and (max-width: $mobileMedium) {
+      width: 100%;
+    }
 
     .featured {
       position: absolute;
