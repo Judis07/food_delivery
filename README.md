@@ -22,6 +22,28 @@ npm start // this will start the app on http://localhost:3000
 
 ### React Folder Architecture
 
+```
+├── node_modules (.gitignore)
+├── public
+│   ├── favicon.ico
+│   ├── index.html
+│   └── manifest.json
+|   └── robots.txt
+├── src
+│   ├── components
+│   │   ├── ...
+│   ├── pages
+│   │   ├── ...
+│   ├── App.js
+│   ├── index.js
+│   ├── index.scss
+│   └── variable.scss
+├── .gitignore
+├── package-lock.json
+└── package.json
+└── README.md
+```
+
 
 
 
