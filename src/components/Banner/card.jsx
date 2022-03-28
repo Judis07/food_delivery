@@ -3,7 +3,7 @@ const Card = (props) => {
   return (
     <div style={{ backgroundColor: bgColor }} className="discount-card">
       <div className="card-image">
-        <img src={image} alt={target} />
+        <img src={image} alt={target} loading="lazy" />
       </div>
 
       <div className="details">
