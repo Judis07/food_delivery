@@ -4,7 +4,15 @@
   width: 65%;
   height: 100%;
   background-color: $primaryHover;
-  padding: 3em;
+  padding: 2em;
+
+  @media only screen and (max-width: $desktopMedium) {
+    width: 70%;
+  }
+
+  @media only screen and (max-width: $mobile) {
+    display: none;
+  }
 
   display: flex;
   justify-content: center;

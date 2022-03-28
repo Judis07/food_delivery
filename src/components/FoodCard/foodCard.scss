@@ -39,6 +39,10 @@
     .price {
       font-weight: $bold;
       font-size: 1.5em;
+
+      @media only screen and (max-width: $desktopMedium) {
+        font-size: 1.2em;
+      }
     }
 
     .card-cta {
@@ -55,6 +59,10 @@
   display: grid;
   grid-template-columns: 1fr 2fr 1fr;
   column-gap: 2em;
+
+  @media only screen and (max-width: $desktopMedium) {
+    column-gap: 1em;
+  }
 
   .card-image {
     height: 8em;
