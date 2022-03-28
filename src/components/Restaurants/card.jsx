@@ -1,5 +1,7 @@
+import Cart from "../Cart";
+
 const Card = (props) => {
-  const { image, name, distance, minPrice, tags, isFeatured } = props;
+  const { image, name, distance, minPrice, tags, inCart, isFeatured } = props;
   return (
     <div className="restaurant-card">
       {isFeatured && <div className="featured">Featured</div>}
@@ -9,7 +11,11 @@ const Card = (props) => {
       </div>
 
       <div className="card-detail">
-        <div className="card-name">{name}</div>
+        <div className="flex-container">
+          <div className="card-name">{name}</div>
+
+          <Cart count={inCart} />
+        </div>
 
         <div className="card-info">
           <div className="time-icon">
