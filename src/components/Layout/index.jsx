@@ -21,6 +21,7 @@ const Layout = ({ children }) => {
               <div className="link">Deals</div>
               <div className="link">My orders</div>
               <div className="cart">
+                <div className="items">4</div>
                 <img src={CartIcon} alt="Cart" />
               </div>
 

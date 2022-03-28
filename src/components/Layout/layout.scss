@@ -38,6 +38,19 @@
         background: #f3f4ff;
         padding: 1em;
         border-radius: 20px;
+        position: relative;
+
+        .items {
+          position: absolute;
+          top: 0;
+          right: -0.5em;
+          color: $neutralWhite;
+          background-color: $primaryDefault;
+          font-weight: $semiBold;
+          padding: 0.5em 0.8em;
+          font-size: 10px;
+          border-radius: 50%;
+        }
 
         img {
           width: 1.5em;
