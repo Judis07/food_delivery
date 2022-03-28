@@ -46,7 +46,7 @@
     .navigation {
       // width: 30%;
 
-      div {
+      & > div {
         margin-left: 1em;
       }
 
@@ -86,20 +86,6 @@
       .profile {
         img {
           border-radius: 20px;
-        }
-      }
-
-      .navbar {
-        display: none;
-        cursor: pointer;
-        background: $neutralGrayLightest;
-        padding: 1em;
-        border-radius: 20px;
-        justify-content: center;
-        align-items: center;
-
-        @media only screen and (max-width: $desktopMedium) {
-          display: flex;
         }
       }
     }

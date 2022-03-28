@@ -2,6 +2,7 @@ import CartIcon from "./cartIcon.svg";
 import ProfileIcon from "./default.svg";
 import Input from "../Input/input";
 import "./layout.scss";
+import MobileNav from "../MobileNav";
 
 const Layout = ({ children }) => {
   return (
@@ -42,12 +43,7 @@ const Layout = ({ children }) => {
                 <img src={ProfileIcon} alt="My Profile" />
               </div>
 
-              <div className="navbar">
-                <img
-                  src="https://res.cloudinary.com/dyvivj6d5/image/upload/v1648459974/menu_nfbixf.svg"
-                  alt="navbar"
-                />
-              </div>
+              <MobileNav />
             </nav>
           </div>
         </div>
