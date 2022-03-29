@@ -44,6 +44,16 @@
         font-weight: $regular;
       }
 
+      .err-msg {
+        color: red;
+        text-transform: capitalize;
+        font-size: 0.9em;
+        font-weight: $semiBold;
+        margin: 1em 0;
+
+        text-align: center;
+      }
+
       .login-btn {
         width: 100%;
         button {

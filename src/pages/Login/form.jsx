@@ -1,19 +1,51 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import { API_URL } from "../../config/utils";
+import axios from "axios";
 import Input from "../../components/Input/input";
 
 const LoginForm = () => {
   const [showPass, setShowPass] = useState(false);
 
-  const getValueFn = (value) => {
-    console.log(value);
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState(null);
+
+  const getValueFn = (name, value) => {
+    if (name === "email") {
+      setEmail(value);
+    } else if (name === "password") {
+      setPassword(value);
+    }
   };
 
   const changeShowPassFn = () => {
     setShowPass(!showPass);
   };
+
+  const handleSubmit = async (event) => {
+    event.preventDefault();
+
+    setLoading(true);
+
+    try {
+      const res = await axios.post(`${API_URL}/login`, {
+        email,
+        password,
+      });
+
+      const { user } = res.data;
+
+      localStorage.setItem("user", JSON.stringify(user));
+      setLoading(false);
+    } catch (err) {
+      setError(err.response.data.error);
+      setLoading(false);
+    }
+  };
   return (
-    <form>
+    <form onSubmit={handleSubmit}>
       <h1>Login</h1>
       <p>Sign in with your data that you entered during your registration.</p>
 
@@ -35,8 +67,14 @@ const LoginForm = () => {
         isRequired={true}
       />
 
+      {!loading && error && <p className="err-msg">{error}</p>}
+
       <div className="login-btn">
-        <button>Login</button>
+        {loading ? (
+          <button>Loading...</button>
+        ) : (
+          <button type="submit">Login</button>
+        )}
       </div>
 
       <div className="forgot-pass">

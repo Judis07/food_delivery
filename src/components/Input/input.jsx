@@ -15,7 +15,7 @@ const Input = (props) => {
   const [value, setValue] = useState("");
 
   const handleChange = (event) => {
-    getValue(event.target.value);
+    getValue(event.target.name, event.target.value);
 
     setValue(event.target.value);
   };
@@ -25,6 +25,7 @@ const Input = (props) => {
 
       <input
         type={type}
+        name={label}
         value={value}
         onChange={handleChange}
         required={isRequired}
