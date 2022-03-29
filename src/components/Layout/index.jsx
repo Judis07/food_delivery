@@ -1,8 +1,8 @@
 import CartIcon from "./cartIcon.svg";
-import ProfileIcon from "./default.svg";
 import Input from "../Input/input";
-import "./layout.scss";
 import MobileNav from "../MobileNav";
+import ProfileInfo from "../ProfileInfo";
+import "./layout.scss";
 
 const Layout = ({ children }) => {
   return (
@@ -39,9 +39,7 @@ const Layout = ({ children }) => {
                 <img src={CartIcon} alt="Cart" />
               </div>
 
-              <div className="profile">
-                <img src={ProfileIcon} alt="My Profile" />
-              </div>
+              <ProfileInfo />
 
               <MobileNav />
             </nav>

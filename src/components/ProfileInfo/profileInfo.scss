@@ -1,0 +1,25 @@
+.profile-info-container {
+  position: relative;
+  .info {
+    height: 0;
+    width: 10em;
+    position: absolute;
+    z-index: 1;
+    top: 4em;
+    right: 0.5em;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 4px 4px 25px rgba(0, 0, 0, 0.6);
+    overflow-x: hidden;
+    transition: 0.5s;
+
+    div {
+      padding: 1em;
+      cursor: pointer;
+    }
+  }
+
+  .active {
+    height: fit-content;
+  }
+}
