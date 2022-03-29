@@ -5,6 +5,7 @@ import { API_URL, setItemTOStorage } from "../../config/utils";
 import axios from "axios";
 
 import Input from "../../components/Input/input";
+import Checkbox from "../../components/Checkbox";
 
 const LoginForm = (props) => {
   const [showPass, setShowPass] = useState(false);
@@ -73,6 +74,8 @@ const LoginForm = (props) => {
         changeShowPass={changeShowPassFn}
         isRequired={true}
       />
+
+      <Checkbox label="Keep me logged in" />
 
       {!loading && error && <p className="err-msg">{error}</p>}
 
