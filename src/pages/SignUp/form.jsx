@@ -47,13 +47,13 @@ const RegisterForm = (props) => {
 
         props.history.push("/");
       } else {
-        throw error("Password and Confirm Password should match");
+        throw "Password and Confirm Password should match";
       }
     } catch (err) {
       if (err.response) {
         setError(err.response.data.error);
       } else {
-        console.log(err);
+        setError(err);
       }
       setLoading(false);
     }
