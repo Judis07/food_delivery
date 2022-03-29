@@ -1,10 +1,12 @@
 import { useState } from "react";
+import { withRouter } from "react-router";
 import { Link } from "react-router-dom";
 import { API_URL } from "../../config/utils";
 import axios from "axios";
+
 import Input from "../../components/Input/input";
 
-const LoginForm = () => {
+const LoginForm = (props) => {
   const [showPass, setShowPass] = useState(false);
 
   const [email, setEmail] = useState("");
@@ -36,11 +38,16 @@ const LoginForm = () => {
       });
 
       const { user } = res.data;
-
       localStorage.setItem("user", JSON.stringify(user));
       setLoading(false);
+
+      props.history.push("/");
     } catch (err) {
-      setError(err.response.data.error);
+      if (err.response) {
+        setError(err.response.data.error);
+      } else {
+        console.log(err);
+      }
       setLoading(false);
     }
   };
@@ -86,4 +93,4 @@ const LoginForm = () => {
   );
 };
 
-export default LoginForm;
+export default withRouter(LoginForm);
