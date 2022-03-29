@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { withRouter } from "react-router";
 import { Link } from "react-router-dom";
-import { API_URL } from "../../config/utils";
+import { API_URL, setItemTOStorage } from "../../config/utils";
 import axios from "axios";
 
 import Input from "../../components/Input/input";
@@ -38,7 +38,7 @@ const LoginForm = (props) => {
       });
 
       const { user } = res.data;
-      localStorage.setItem("user", JSON.stringify(user));
+      setItemTOStorage("user", JSON.stringify(user));
       setLoading(false);
 
       props.history.push("/");
