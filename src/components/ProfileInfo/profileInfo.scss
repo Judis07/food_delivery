@@ -1,5 +1,11 @@
 .profile-info-container {
   position: relative;
+
+  .profile {
+    img {
+      cursor: pointer;
+    }
+  }
   .info {
     height: 0;
     width: fit-content;
