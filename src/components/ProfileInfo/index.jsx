@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { withRouter } from "react-router";
+import { getUserEmail } from "../../config/utils";
 import "./profileInfo.scss";
 
 const ProfileInfo = (props) => {
@@ -21,7 +22,7 @@ const ProfileInfo = (props) => {
       </div>
 
       <div className={open ? "info active" : "info"}>
-        {/* <div>arvind@test.com</div> */}
+        <div>{getUserEmail()}</div>
         <div onClick={logout}>Logout</div>
       </div>
     </div>
