@@ -1,5 +1,7 @@
 import { lazy, Suspense } from "react";
-import { BrowserRouter, Switch, Route } from "react-router-dom";
+import { BrowserRouter, Switch } from "react-router-dom";
+import ProtectedRoute from "./routes/protectedRoute";
+import PublicRoute from "./routes/publicRoute";
 // import Login from "./pages/Login";
 // import SignUp from "./pages/SignUp";
 
@@ -13,9 +15,9 @@ function App() {
       <BrowserRouter>
         <Suspense fallback={<div>Loading...</div>}>
           <Switch>
-            <Route path="/" component={Home} exact />
-            <Route path="/login" component={Login} exact />
-            <Route path="/register" component={SignUp} exact />
+            <PublicRoute path="/login" component={Login} exact />
+            <PublicRoute path="/register" component={SignUp} exact />
+            <ProtectedRoute path="/" component={Home} exact />
           </Switch>
         </Suspense>
       </BrowserRouter>
